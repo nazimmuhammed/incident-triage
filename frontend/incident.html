@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Incident Triage AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="card">
+  <h2>🚨 Incident Triage AI</h2>
+  <p class="subtitle">Describe the incident and let AI analyze it</p>
+
+  <input id="service" placeholder="Service name (e.g. Auth)" />
+  <textarea id="error" placeholder="What went wrong?"></textarea>
+
+  <button id="analyzeBtn" onclick="analyzeIncident()">Run AI Triage</button>
+
+  <div id="loader" class="loader hidden"></div>
+
+  <div id="result" class="result hidden">
+    <h3>🧠 AI Analysis</h3>
+    <p><b>Severity:</b> <span id="severity"></span></p>
+    <p><b>Root Cause:</b> <span id="cause"></span></p>
+    <p><b>Suggested Fix:</b> <span id="solution"></span></p>
+    <p><b>Confidence:</b> <span id="confidence"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
